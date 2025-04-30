@@ -6,18 +6,23 @@
     <title>Sales Performance at Panorama City</title>
     <style>
         body {
-            margin-left: 100px;
-            margin-right: 100px;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
+            padding-left: 100px;
+            padding-right: 100px;
         }
         h1 {
             font-size: 48px;
+            text-align: center;
+            margin-top: 50px;
         }
         h2 {
-            text-align: center;
             font-size: 24px;
+            text-align: center;
+            margin-top: 75px;
         }
-        .section {
+        section {
             margin-top: 75px;
         }
         .grid-container {
@@ -35,27 +40,35 @@
         .grid-item p {
             font-size: 12px;
         }
+        .map-container, .plot-container {
+            text-align: center;
+        }
+        .map-container iframe, .plot-container img {
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
-
     <h1>Sales Performance at Panorama City</h1>
 
-    <div class="section">
+    <section>
         <h2>Executive Summary</h2>
         <p>- <strong>Competitive Dynamics and Positioning</strong>: The central positioning of Pollo Campero among its competitors in Van Nuys creates intense competition, necessitating differentiation through unique offerings, superior customer service, or competitive pricing. The close proximity of multiple QSRs could also lead to collaborative marketing efforts, impacting sales performance.</p>
         <p>- <strong>Seasonal and Channel-Specific Sales Fluctuations</strong>: Sales at Pollo Campero show significant seasonal fluctuations, with peaks during the holiday season driven primarily by the "To GO" channel. The sharp decline in sales in January 2025, particularly in the "To GO" channel, suggests a post-holiday drop-off that affects overall performance.</p>
         <p>- <strong>External Factors and Marketing Campaigns</strong>: The end of marketing campaigns and local disruptions such as ICE raids and wildfires likely contributed to the downturn in sales toward the end of 2024 and early 2025. These factors may have reduced customer visits and spending, impacting Pollo Campero's sales performance.</p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Geographic Overview</h2>
         <p>- The Pollo Campero location is centrally positioned among its competitors, with La Carreta, Pollos Sherman, Ay Papa Que Rico, and Tacos Mexico all situated within a close proximity, forming a cluster around it. This central positioning could potentially attract a high volume of foot traffic as customers have multiple dining options in a concentrated area.</p>
         <p>- The dynamics of the competition might be intense due to the close proximity of these QSR competitors. Pollo Campero will need to differentiate itself through unique offerings, superior customer service, or competitive pricing to capture and retain customers. The presence of multiple competitors in such a small radius could also lead to collaborative marketing efforts or promotions to draw more customers to the area.</p>
-        <iframe src="panorama_comp_map.html" width="100%" height="500px" style="border:none;"></iframe>
-    </div>
+        <div class="map-container">
+            <iframe src="panorama_comp_map.html" style="width:100%; height:500px;" frameborder="0"></iframe>
+        </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Competitors in the Area</h2>
         <div class="grid-container">
             <div class="grid-item">
@@ -79,36 +92,43 @@
                 <p>Tacos Mexico<br>7140 Van Nuys Blvd, Van Nuys, CA, United States</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Weekly Sales Performance</h2>
         <p>• Overall, sales fluctuate within a broad band, with a fairly regular up‐and‐down “wave” evident through the year. There are notable peaks around late 2023 and again in mid‐2024, followed by sizable dips soon after.</p>
         <p>• Most weeks’ actual sales stay near or within the forecast’s confidence band, but there are a few sharp outliers—particularly one in early 2025 that falls well below the expected range.</p>
         <p>• A clear downturn occurs toward the end of 2024 into early 2025, when observed sales often drop below the model’s lower confidence limit before partially rebounding.</p>
-        <img src="https://www.dropbox.com/scl/fi/6n8913gp8zatxnr9n8frs/prophet-weekly.png?rlkey=vmekmrg42tgnywsyihz7zhs5o&raw=1" alt="Weekly Sales Performance" width="100%">
-    </div>
+        <div class="plot-container">
+            <img src="https://www.dropbox.com/scl/fi/6n8913gp8zatxnr9n8frs/prophet-weekly.png?rlkey=vmekmrg42tgnywsyihz7zhs5o&raw=1" alt="Weekly Sales Performance">
+        </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Sales Performance by Channel</h2>
         <p>- <strong>Relative Importance of Each Channel</strong>: The "To GO" channel consistently contributes the highest sales among the three channels, indicating its significant importance to the Panorama City location of Pollo Campero. The "Dine In" and "OLO" (Online Orders) channels contribute much smaller portions of the total sales, with "Dine In" generally outperforming "OLO" except for a few weeks where "OLO" saw spikes.</p>
         <p>- <strong>Significant Changes in Total Sales</strong>: There is a notable increase in total sales during the holiday season, particularly in late November and December 2024, with the highest total sales recorded on December 16, 2024, at $28,324.68. This surge is primarily driven by the "To GO" channel, which also saw its peak during this period. Conversely, there is a significant drop in total sales in January 2025, with the lowest recorded on January 27, 2025, at $9,344.59, affecting all channels but most dramatically impacting the "To GO" channel.</p>
-        <iframe src="panorama_channel_sales.html" width="100%" height="500px" style="border:none;"></iframe>
-    </div>
+        <div class="plot-container">
+            <iframe src="panorama_channel_sales.html" style="width:100%; height:500px;" frameborder="0"></iframe>
+        </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Comparison of Monthly Foot Traffic (Placer)</h2>
         <p>- <strong>Relative Rankings and Trends</strong>: Pollo Campero consistently leads in foot traffic, with numbers significantly higher than its competitors, peaking at 14,619 in March 2024. Ay Papa Que Rico follows as the second most visited location, with notable peaks in March 2024 (9,376) and November 2024 (9,508). Pollos Sherman, Tacos Mexico, and La Carreta have lower and more fluctuating traffic, with Pollos Sherman experiencing a sharp increase in May 2024 (4,292) and November 2024 (4,287).</p>
         <p>- <strong>Notable Changes in Pollo Campero Traffic</strong>: Pollo Campero's foot traffic shows a general upward trend with a peak in March 2024 (14,619). There are no significant sharp declines or increases after this peak, indicating stable and consistently high traffic throughout the year. The lowest traffic recorded was in January 2024 (10,529), which still surpasses the highest traffic of any other competitor.</p>
-        <iframe src="panorama_monthly_traffic.html" width="100%" height="500px" style="border:none;"></iframe>
-    </div>
+        <div class="plot-container">
+            <iframe src="panorama_monthly_traffic.html" style="width:100%; height:500px;" frameborder="0"></iframe>
+        </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Underlying Sales Performance - Annotated</h2>
         <p>• The marketing shifts (end of the QSR conversions campaign, then start and end of PMAX/Search ads) could explain the rise and fall in foot traffic, as these campaigns likely drove customer awareness and visits. Once campaigns ended, fewer ads and promotions may have contributed to declining sales over time.</p>
         <p>• Local disruptions like ICE raids and nearby wildfires may have further dampened sales, either by deterring some segments of the community from dining out due to deportation fears, or by making travel and dining out less appealing in the face of evacuation orders and poor air quality.</p>
-        <img src="https://www.dropbox.com/scl/fi/wbwnblcwxznuqzez9f3ea/prophet-annotated.png?rlkey=fwlw0qw8i5kkiah2mejskgcae&raw=1" alt="Underlying Sales Performance - Annotated" width="100%">
-    </div>
-
+        <div class="plot-container">
+            <img src="https://www.dropbox.com/scl/fi/wbwnblcwxznuqzez9f3ea/prophet-annotated.png?rlkey=fwlw0qw8i5kkiah2mejskgcae&raw=1" alt="Underlying Sales Performance - Annotated">
+        </div>
+    </section>
 </body>
 </html>
